@@ -49,7 +49,7 @@ const Home = () => {
                 imgUrl={n.Image}
                 title={n.title}
                 description={n.description.slice(0, 200)}
-                author={n.author}
+               
               />
             ))}
         </div>
@@ -65,7 +65,7 @@ const Home = () => {
                 imgUrl={n.Image}
                 title={n.title}
                 description={n.description.slice(0, 200)}
-                author={n.author}
+              
               />
             ))}
         </div>
@@ -162,7 +162,7 @@ const Home = () => {
                 imgUrl={n.Image}
                 title={n.title}
                 description={n.description.slice(0, 200)}
-                // author={n.author}
+              
               />
             ))}
         </div>
@@ -179,7 +179,7 @@ const Home = () => {
                 imgUrl={n.Image}
                 title={n.title}
                 description={n.description.slice(0, 200)}
-                // author={n.author}
+               
               />
             ))}
         </div>

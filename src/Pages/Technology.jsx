@@ -32,7 +32,7 @@ export const Technology = () => {
                                 imgUrl={n.Image}
                                 description={n.description.slice(0, 200)}
                                 title={n.title.slice(0, 25)}
-                                author={n.author}
+                               
                             />
                         ))
                     }

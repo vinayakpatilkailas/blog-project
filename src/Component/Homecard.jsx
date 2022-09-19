@@ -8,7 +8,7 @@ const CardHome = (props) => {
           <div className={articleid}>
             <div className="cardHome" >
               <div className='cardImage'>
-                <img src={imgUrl} alt="Image not found " />
+                <img src={imgUrl} alt=" " />
               </div>
               <div className='homeBigcard'  >
                 <h3 >{title}</h3>

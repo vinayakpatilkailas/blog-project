@@ -21,7 +21,7 @@ const Fitness = () => {
                                 imgUrl={n.Image}
                                 title={n.title}
                                 description={n.description.slice(0, 200)}
-                                author={n.author}
+                              
                             />
                         ))
                     }
@@ -36,7 +36,7 @@ const Fitness = () => {
                                 imgUrl={n.Image}
                                 description={n.description.slice(0, 200)}
                                 title={n.title.slice(0, 25)}
-                                author={n.author}
+                              
                             />
                         ))
                     }
