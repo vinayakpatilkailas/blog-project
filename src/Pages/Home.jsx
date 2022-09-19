@@ -6,7 +6,7 @@ import Smallcard from "../Component/Smallcard";
 import { store } from "./Details";
 
 const Home = () => {
-  const [detail, setDetail] = useContext(store);
+  const [detail] = useContext(store);
   return (
     <div>
       <div className="Home">

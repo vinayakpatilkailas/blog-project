@@ -4,7 +4,7 @@ import Card from '../Component/Card'
 import Smallcard from '../Component/Smallcard';
 
 export const Technology = () => {
-  const [detail, ] = useContext(store);
+  const [detail ] = useContext(store);
   return (
     <div>
             <h1 style={{ margin: "20px 10%", display: "inline-block" }}>Technology</h1>

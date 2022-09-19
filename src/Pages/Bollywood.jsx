@@ -5,7 +5,7 @@ import Card from '../Component/Card'
 import Smallcard from '../Component/Smallcard';
 
 const Bollywood = () => {
-    const [detail, setDetail] = useContext(store);
+    const [detail] = useContext(store);
     console.log(detail);
     return (
         <div>
@@ -21,7 +21,7 @@ const Bollywood = () => {
                                 imgUrl={n.Image}
                                 title={n.title}
                                 description={n.description.slice(0, 200)}
-                                // author={n.author}
+                              
                             />
                         ))
                     }
@@ -36,7 +36,7 @@ const Bollywood = () => {
                                 imgUrl={n.Image}
                                 description={n.description.slice(0, 200)}
                                 title={n.title.slice(0, 25)}
-                                // author={n.author}
+                             
                             />
                         ))
                     }

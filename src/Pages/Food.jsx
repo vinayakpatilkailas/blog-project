@@ -5,7 +5,7 @@ import Card from '../Component/Card'
 import Smallcard from '../Component/Smallcard';
 
 const Food = () => {
-    const [detail, setDetail] = useContext(store);
+    const [detail] = useContext(store);
     console.log(detail);
     return (
         <div>
