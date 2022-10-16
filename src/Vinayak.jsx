@@ -17,23 +17,10 @@ import axios from 'axios'
         apiFetch();
       }, [api]);
       console.log(api);
-
-
-
-  return (
-    <div>
-
-
-
-
-
-
-
-
-
-
-
-    </div>
+      
+      
+      return (
+    <div></div>
   )
 }
 export default Vinayak ;
