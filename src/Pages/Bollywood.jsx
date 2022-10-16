@@ -29,7 +29,7 @@ const Bollywood = () => {
             <div className="Bigcomponent">
                 <div className='Rightbar'>
                     {
-                        api && api.filter((article) => { return article.category === "Bollywood" }).map((n) => (
+                        api && api .filter((article) => { return article.category === "Bollywood" }).map((n) => (
                             <Card
                             key={n.id}
                                 articleid={n.id}
@@ -44,7 +44,7 @@ const Bollywood = () => {
 
                 <div className="Leftside">
                     {
-                        detail.filter((article) => { return article.category === "Bollywood" }).map((n) => (
+                        api && api .filter((article) => { return article.category === "Bollywood" }).map((n) => (
                             <Smallcard
                             key={n.id}
                                 articleid={n.id}
