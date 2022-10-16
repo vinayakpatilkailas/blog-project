@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext,useState,useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import Card from "../Component/Card";
 import CardHome from "../Component/Homecard";
@@ -6,6 +7,19 @@ import Smallcard from "../Component/Smallcard";
 import { store } from "./Details";
 
 const Home = () => {
+  const[api, setApi] = useState([])
+    const fetchData = async () => {
+        try {
+          const response = await axios.get("https://vinayakpatil.herokuapp.com/api/details");
+          return response.data;
+        } catch (error) {}
+      };
+      useEffect(() => {
+        const apiFetch = async () => {
+            setApi(await fetchData());
+        };
+        apiFetch();
+      }, [api]);
   const [detail] = useContext(store);
   return (
     <div>
@@ -38,7 +52,7 @@ const Home = () => {
         <h1 style={{ marginTop: "40px" }}>The Latest</h1>
         <hr style={{ width: "200px", thickness: "20px" }} />
         <div className="homeleft left1 ">
-          {detail
+          {api && api 
             .filter((article) => {
               return article.category === "bollywood";
             })
@@ -54,7 +68,7 @@ const Home = () => {
             ))}
         </div>
         <div className="homeleft left1">
-          {detail
+          {api && api 
             .filter((article) => {
               return article.category === "technology";
             })
@@ -70,7 +84,7 @@ const Home = () => {
             ))}
         </div>
         <div className="homeleft left1">
-          {detail
+          {api && api 
             .filter((article) => {
               return article.category === "food";
             })
@@ -93,7 +107,7 @@ const Home = () => {
         <hr style={{ width: "200px", thickness: "20px" }} />
 
         <div className="Rightside2">
-          {detail
+          {api && api 
             .filter((article) => {
               return article.category === "mix";
             })
@@ -109,7 +123,7 @@ const Home = () => {
             ))}
         </div>
         <div className="Leftside2">
-          {detail
+          {api && api 
             .filter((article) => {
               return article.category === "mix";
             })
@@ -134,7 +148,7 @@ const Home = () => {
         <hr />
 
         <div className="homeleft">
-          {detail
+          {api && api 
             .filter((article) => {
               return article.category === "footer1";
             })
@@ -151,7 +165,7 @@ const Home = () => {
         </div>
 
         <div className="homeleft">
-          {detail
+          {api && api 
             .filter((article) => {
               return article.category === "footer2";
             })
@@ -168,7 +182,7 @@ const Home = () => {
         </div>
 
         <div className="homeleft">
-          {detail
+          {api && api 
             .filter((article) => {
               return article.category === "footer3";
             })

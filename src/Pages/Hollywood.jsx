@@ -1,9 +1,23 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState,useEffect} from 'react'
+import axios from 'axios';
 import { store } from './Details'
 import Card from '../Component/Card'
 import Smallcard from '../Component/Smallcard';
 
 const Hollywood = () => {
+    const[api, setApi] = useState([])
+    const fetchData = async () => {
+        try {
+          const response = await axios.get("https://vinayakpatil.herokuapp.com/api/details");
+          return response.data;
+        } catch (error) {}
+      };
+      useEffect(() => {
+        const apiFetch = async () => {
+            setApi(await fetchData());
+        };
+        apiFetch();
+      }, [api]);
     const [detail ] = useContext(store);
     console.log(detail);
     return (
@@ -13,7 +27,7 @@ const Hollywood = () => {
             <div className="Bigcomponent">
                 <div className='Rightside'>
                     {
-                        detail.filter((article) => { return article.category === "Hollywood" }).map((n) => (
+                        api && api.filter((article) => { return article.category === "Hollywood" }).map((n) => (
                             <Card
                             key={n.id}
                                 articleid={n.id}
@@ -28,7 +42,7 @@ const Hollywood = () => {
 
                 <div className="Leftside">
                     {
-                        detail.filter((article) => { return article.category === "Hollywood" }).map((n) => (
+                        api && api .filter((article) => { return article.category === "Hollywood" }).map((n) => (
                             <Smallcard
                             key={n.id}
                                 articleid={n.id}
