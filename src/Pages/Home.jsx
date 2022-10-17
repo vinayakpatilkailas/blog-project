@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Card from "../Component/Card";
 import CardHome from "../Component/Homecard";
 import Smallcard from "../Component/Smallcard";
-import { store } from "./Details";
+// import { store } from "./Details";
 
 const Home = () => {
   const[api, setApi] = useState([])
@@ -20,7 +20,7 @@ const Home = () => {
         };
         apiFetch();
       }, [api]);
-  const [detail] = useContext(store);
+  // const [detail] = useContext(store);
   return (
     <div>
       <div className="Home">

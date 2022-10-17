@@ -1,6 +1,6 @@
 import React, {useContext,useState,useEffect} from 'react'
 import axios from 'axios';
-import { store } from './Details'
+// import { store } from './Details'
 import Card from '../Component/Card'
 import Smallcard from '../Component/Smallcard';
 
@@ -18,7 +18,7 @@ export const Technology = () => {
         };
         apiFetch();
       }, [api]);
-  const [detail ] = useContext(store);
+  // const [detail ] = useContext(store);
   return (
     <div>
             <h1 style={{ margin: "20px 10%", display: "inline-block" }}>Technology</h1>
