@@ -10,13 +10,12 @@ import Food from "./Pages/Food";
 import SingleBlogPage from "./Pages/SingleBlogPage";
 import "./Styles.css";
 import Details from "./Pages/Details";
-import Vinayak from "./Vinayak"
 
 
 function App() {
   return (
     <div className="App">
-  <Vinayak/>
+ 
       <Details>
         <Header />
         <BrowserRouter>
